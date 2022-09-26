@@ -1,0 +1,51 @@
+body {
+    font-family: "Gotham SSm A", "Gotham SSm B", Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background-color: #DAD9D9;
+}
+
+
+h1 {
+    background-color: #1266AC;
+    color: #ffffff;
+    margin-top: 0px;
+    padding: 1%;
+}
+
+#counterBox {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 40%;
+    height: 30%;
+    background-color: #1266AC;
+    color: #ffffff;
+    padding: 1%;
+
+}
+
+#counterBox #counterSpace {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#counterBox p {
+    font-size: smaller;
+    text-align: center;
+}
+
+#graphBox {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 40%;
+    background-color: #1266AC;
+    padding: 1%;
+    margin: auto;
+    margin-top: 2%;
+    color: #ffffff;
+    justify-content: space evenly;
+    font-size: smaller;
+    text-align: center;
+}
