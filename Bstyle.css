@@ -4,11 +4,16 @@ body {
     background-color: #DAD9D9;
 }
 
+#Header {
+    background-color: #1266AC;
+}
+
 
 h1 {
     background-color: #1266AC;
     color: #ffffff;
     margin-top: 0px;
+    margin-bottom: 20px;
     padding: 1%;
 }
 
@@ -43,7 +48,7 @@ h1 {
     background-color: #1266AC;
     padding: 1%;
     margin: auto;
-    margin-top: 2%;
+    margin-top: 20px;
     color: #ffffff;
     justify-content: space evenly;
     font-size: smaller;
