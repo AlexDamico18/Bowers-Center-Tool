@@ -1,0 +1,36 @@
+# Last updated 11/26/2022
+
+runtime: php81 # Replace with php74 to use PHP 7.4
+
+handlers:
+# Serve a directory as a static resource.
+- url: /src
+  static_dir: src
+
+
+# Serve images as static resources.
+# - url: /(.+\.(gif|png|jpg|ico))$
+#   static_files: \1
+#   upload: .+\.(gif|png|jpg|ico)$
+
+# Serve your app through a front controller at 
+# index.html, index.php or public/index.php.
+- url: .*
+  script: auto
+
+entrypoint:
+  serve handler.php
+
+# environment variables
+  # REPLACE USER, PASSWORD, DATABASE, AND CONNECTION_NAME with 
+  # the values obtained when configuring your Cloud SQL instance
+env_variables:
+  INSTANCE_UNIX_SOCKET: /cloudsql/bowerscenter:us-east1:bowerscenter
+  CLOUDSQL_USER: root
+  CLOUDSQL_PASSWORD: root
+  CLOUDSQL_DB: bowers_center
+# [END gae_cloudsql_mysql_env]
+
+
+
+

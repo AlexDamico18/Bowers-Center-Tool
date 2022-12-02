@@ -5,31 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bowers Center Busyness Tracker</title>
-    <link rel="stylesheet" href="Bstyle.css">
+    <link rel="stylesheet" href="src/Bstyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="src/BCenter.js"></script>
+
+
+
 </head>
 
 <body>
     <div id="Header">
-        <img src="48413558052_ee0b4e91e0_o.jpg" alt="Bowers Center" width=100% height=20% title="Bowers Fitness Center">
+        <img src="src/48413558052_ee0b4e91e0_o.jpg" alt="Bowers Center" width=100% height=20%
+            title="Bowers Fitness Center">
         <h1>Fitness Center Busyness Tracker</h1>
     </div>
-    <div id="counterBox">
+
+    <div id="counterBox" class="box">
         <div id="counterSpace">
             <h2 id="counterTitle">Number of People in the Fitness Center:</h2>
-            <h2>40</h2>
+            <h2 id="currentNumber">40</h2>
+        </div>
+        <div id="buttons">
+            <button id="enter-btn" type="button">Entering Fitness Center</button>
+            <button id="exit-btn" type="button">Exiting Fitness Center</button>
         </div>
         <div>
-            <p id="counterDisclaimer">*The number of people is based on the number of swipes into the Fitness
-                Center in the last 45
-                minutes. The actual number of people in the Fitness Center may vary.*</p>
+            <p id="counterDisclaimer">*Please click "Entering Fitness Center" when you arrive and "Exiting Fitness
+                Center" when you leave.*</p>
         </div>
         <!--A backend counter needs to apply for the number shown here-->
 
     </div>
-    <div id="graphBox">
-        <h3>Busyness Summary from Monday last week:</h3>
+    <div id="graphBox" class="box">
+        <label>Select a day:</label>
+        <select id="select-day">
+            <option>--Select a day--</option>
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+            <option value="sunday">Sunday</option>
+        </select>
+        <h3 id="chart-header">Busyness Summary from Monday last week:</h3>
+
         <!--'Monday' needs to change to match the day of the week-->
-        <img src="graph_pic.PNG" alt="Busyness Graph" width=100% height=100%>
-        <!--Graph photo will be replaced with graph made from database-->
+    </div>
+    <div class="box" id="chartBox">
+        <canvas id="chart"></canvas>
     </div>
 </body>

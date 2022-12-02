@@ -21,15 +21,25 @@ h1 {
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: 40%;
+    width: 60%;
     height: 30%;
     background-color: #1266AC;
     color: #ffffff;
     padding: 1%;
-
 }
 
-#counterBox #counterSpace {
+#currentNumber {
+    margin: 0%;
+}
+
+#counterSpace {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0%;
+}
+
+.box {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -40,17 +50,49 @@ h1 {
     text-align: center;
 }
 
+#select-day {
+    text-align: center;
+    margin-top: 1%;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 #graphBox {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    height: 40%;
+    width: 60%;
+    height: 60%;
     background-color: #1266AC;
     padding: 1%;
     margin: auto;
     margin-top: 20px;
     color: #ffffff;
-    justify-content: space evenly;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: smaller;
+    text-align: center;
+}
+
+#select-day {
+    margin-top: 1.5%;
+}
+
+#chartBox {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 60%;
+    background-color: white;
+    padding: 1%;
+    margin: auto;
+    margin-top: 20px;
+    color: #ffffff;
+    justify-content: space-evenly;
+    align-items: center;
     font-size: smaller;
     text-align: center;
 }
